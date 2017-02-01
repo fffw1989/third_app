@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Freedoms</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Number</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @freedoms.each do |freedom| %>
+      <tr>
+        <td><%= freedom.title %></td>
+        <td><%= freedom.number %></td>
+        <td><%= link_to 'Show', freedom %></td>
+        <td><%= link_to 'Edit', edit_freedom_path(freedom) %></td>
+        <td><%= link_to 'Destroy', freedom, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Freedom', new_freedom_path %>

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @freedom.title %>
+</p>
+
+<p>
+  <strong>Number:</strong>
+  <%= @freedom.number %>
+</p>
+
+<%= link_to 'Edit', edit_freedom_path(@freedom) %> |
+<%= link_to 'Back', freedoms_path %>
